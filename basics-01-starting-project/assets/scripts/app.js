@@ -1,26 +1,11 @@
-//alert('This is an alert for test!');
+const defaultResult = 0;
+let currentResult = defaultResult;
 
-/* let currentResult;
-console.log(currentResult);
-currentResult = 0;
-currentResult = (currentResult + 10) * 3 / 2 - 1;
-console.log(currentResult); */
-
-function add(num1, num2)
+function add()
 {
-    return num1+num2
+    currentResult = currentResult + parseInt(userInput.value);
+    userInput.value = '';
+    outputResult(currentResult, '');
 }
 
-console.log(add(2,4))
-console.log(add(7,5))
-
-
-let defaultResult = 0;
-let currentResult = defaultResult;
-currentResult = (currentResult + 10) * 3 / 2 - 1;
-
-let calculationDescription = '('+`${defaultResult}`+' + 10) * 3 / 2 - 1';
-let errorMessage = 'An error occurred';
-
-
-outputResult(currentResult, errorMessage);
+addBtn.addEventListener('click', add);
